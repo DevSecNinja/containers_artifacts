@@ -105,7 +105,7 @@ az aks create --resource-group TEAMRESOURCES `
     --docker-bridge-address 172.17.0.1/16 `
     --dns-service-ip 10.2.5.10 `
     --service-cidr 10.2.5.0/24
-
+`
 
 # Create namespaces
 kubectl create namespace api
@@ -156,7 +156,7 @@ az role assignment create `
         --resource-group TEAMRESOURCES `
         --name aks-oh10-ch3 `
         --query id -o tsv)/namespaces/web"
-
+`
 ## API Dev Roles
 az role assignment create `
   --assignee "apidev@msftopenhack7030ops.onmicrosoft.com" `
@@ -173,7 +173,7 @@ az role assignment create `
         --resource-group TEAMRESOURCES `
         --name aks-oh10-ch3 `
         --query id -o tsv)/namespaces/api"
-
+`
 ## List namespaces Azure RBAC roles
 az role assignment list --scope /subscriptions/65c43cda-8cde-4186-977b-1ab83ec326c6/resourcegroups/TEAMRESOURCES/providers/Microsoft.ContainerService/managedClusters/aks-oh10-ch3/namespaces/api
 
